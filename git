@@ -1,0 +1,7 @@
+
+本地代码库无缝切换方案：
+git remote add new_origin_name git@gitlab.xiidev.com:sample/proj.git
+git fetch --progress --prune --recurse-submodules=no new_origin_name
+git branch --set-upstream-to=new_origin_name/master master
+git remote rm origin
+git remote rename new_origin_name origin
