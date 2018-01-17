@@ -5,3 +5,44 @@ git fetch --progress --prune --recurse-submodules=no new_origin_name
 git branch --set-upstream-to=new_origin_name/master master
 git remote rm origin
 git remote rename new_origin_name origin
+
+
+#拉取分支
+git clone url
+git pull origin master
+
+#查看当前分支
+git branch
+
+#本地新建分支
+git checkout -b develop
+
+#切换分支
+git checkout develop
+
+#本地提交代码
+git add fileName
+git commit -m "注释"
+git push origin 分支名
+
+#删除分支
+git branch -D 分支名
+
+#合并分支
+git merge 分支名
+
+#解决冲突
+git reset --hard FETCH_HEAD
+
+#记住用户信息
+git config --global credential.helper store
+
+
+
+
+
+
+
+
+
+
