@@ -37,6 +37,9 @@ git reset --hard FETCH_HEAD
 #记住用户信息
 git config --global credential.helper store
 
+#关联远程分支
+git branch --set-upstream rule  origin/rule
+
 
 
 
