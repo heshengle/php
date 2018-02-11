@@ -41,6 +41,9 @@ git config --global credential.helper store
 git branch --set-upstream rule  origin/rule
 
 
+git branch -r -d origin/branch-name  
+
+
 
 
 
