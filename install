@@ -71,7 +71,7 @@ gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-
 --enable-zip \
 --enable-mysqlnd-compression-support \
 --with-pear \
---enable-opcache
+--enable-opcache=no
 
 3、编译安装php
 make && make install
