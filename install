@@ -118,7 +118,7 @@ tar -zxvf libmcrypt-2.5.7.tar.gz
 cd libmcrypt-2.5.7  
    
 #编译（默认安装到/usr/local/lib/）  
-./configure --prefix=/usr/local/libmcrypt  
+./configure
    
 #执行安装  
 make && make install  
