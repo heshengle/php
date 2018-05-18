@@ -123,3 +123,16 @@ cd libmcrypt-2.5.7
 #执行安装  
 make && make install  
 
+
+
+报错信息为：
+configure: error: off_t undefined; check your library configuration
+
+
+在编译php时会遇到如上问题，这个问题一般在centos 64位系统中比较多见，解决如下
+
+echo '/usr/local/lib64
+/usr/local/lib
+/usr/lib
+/usr/lib64'>>/etc/ld.so.conf&&ldconfig -v
+
