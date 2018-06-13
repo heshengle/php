@@ -1,0 +1,9 @@
+git clone https://github.com/nicolasff/phpredis
+
+git checkout php7
+
+/usr/local/php7/bin/phpize #找不到phpize的路径可用whereis命令查看：whereis phpize 得到路径
+
+./configure --with-php-config=/usr/local/php/bin/php-config #此处为php-config的路径，可用whereis php-config查看路径
+
+make && make install
