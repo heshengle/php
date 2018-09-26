@@ -44,7 +44,43 @@ git branch --set-upstream rule  origin/rule
 git branch -r -d origin/branch-name  
 
 
+#远程创建仓库
 
+# 安装Git
+ yum install git
+
+# 创建一个git用户组和用户，用来运行git服务
+ groupadd git
+ adduser git -g git
+
+# 找到这句：
+git:x:503:503::/home/git:/bin/bash
+
+# 改为：
+git:x:503:503::/home/git:/bin/git-shell
+
+#创建证书登录
+ mkdir /home/git/.ssh
+ chmod 700 /home/git/.ssh
+ touch 700 /home/git/.ssh/authorized_keys
+ chmod 600 /home/git/.ssh/authorized_keys
+ 
+ sudo chown -R git:git /home/git/.ssh/
+
+# 创建私钥，文件位于用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件
+ ssh-keygen -t rsa -C "youremail@example.com"
+ 
+ #初始化Git仓库
+ cd /srv
+ mkdir gitrepo
+ chown git:git gitrepo/
+ cd gitrepo
+
+# 创建一个空的Git仓库，服务器上的Git仓库通常都以.git结尾
+ git init --bare project.git
+
+# 将仓库所属用户改为git
+ chown -R git:git project.git
 
 
 
