@@ -112,31 +112,11 @@ echo '/usr/local/lib64
 
 
 configure: error: mcrypt.h not found. Please reinstall libmcrypt.
-#使用wget可以通过以下路径下载  
-wget ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/attic/libmcrypt/libmcrypt-2.5.7.tar.gz  
-   
-#解压  
-tar -zxvf libmcrypt-2.5.7.tar.gz   
-   
-#进入目录  
-cd libmcrypt-2.5.7  
-   
-#编译（默认安装到/usr/local/lib/）  
-./configure
-   
-#执行安装  
-make && make install  
+
+yum install -y epel-release
+yum install -y libmcrypt-devel
 
 
 
-报错信息为：
-configure: error: off_t undefined; check your library configuration
 
-
-在编译php时会遇到如上问题，这个问题一般在centos 64位系统中比较多见，解决如下
-
-echo '/usr/local/lib64
-/usr/local/lib
-/usr/lib
-/usr/lib64'>>/etc/ld.so.conf&&ldconfig -v
 
