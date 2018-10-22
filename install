@@ -1,7 +1,7 @@
 1、安装php的安装依赖包
 yum install libxml2 libxml2-devel openssl openssl-devel bzip2 bzip2-devel libcurl gcc
-libcurl-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel 
-gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel
+yum install libcurl-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel 
+yum install gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel
 
 下载 
 wget -O php7.tar.gz http://cn2.php.net/get/php-7.1.1.tar.gz/from/this/mirror
