@@ -82,9 +82,10 @@ git:x:503:503::/home/git:/bin/git-shell
 # 将仓库所属用户改为git
  chown -R git:git project.git
 
-
-
-
+清除.gitignore缓存
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
 
 
 
