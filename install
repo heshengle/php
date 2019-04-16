@@ -57,6 +57,7 @@ wget -O php7.tar.gz http://cn2.php.net/get/php-7.1.1.tar.gz/from/this/mirror
 --with-libmbfl \
 --with-onig \
 --enable-pdo \
+--with-mysql=mysqlnd \
 --with-mysqli=mysqlnd \
 --with-pdo-mysql=mysqlnd \
 --with-zlib-dir \
