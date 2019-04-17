@@ -1,0 +1,2 @@
+1: php-fpm.conf
+pm.max_children   内存/30M
