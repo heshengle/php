@@ -1,0 +1,23 @@
+1.sudo yum install -y curl policycoreutils-pythonopenssh-server
+
+2.将SSH服务设置成开机自启动，安装命令：sudo systemctl enable sshd  
+
+3.启动SSH服务，安装命令：sudo systemctl start sshd
+
+sudo yum install postfix
+
+sudo systemctl enable postfix
+
+sudo systemctl start postfix
+
+wget https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-10.0.0-ce.0.el7.x86_64.rpm
+
+rpm -i gitlab-ce-10.0.0-ce.0.el7.x86_64.rpm
+
+vim  /etc/gitlab/gitlab.rb
+
+external_url= "http://localhost:8081"
+
+gitlab-ctl reconfigure
+
+gitlab-ctl restart
